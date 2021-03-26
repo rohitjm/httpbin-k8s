@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: httpbin
 spec:
-  replicas: 3
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: httpbin
     spec:
       containers:
-      - image: docker.io/kennethreitz/httpbin:test
+      - image: docker.io/kennethreitz/httpbin:latest
         name: httpbin
         ports:
         - containerPort: 80
